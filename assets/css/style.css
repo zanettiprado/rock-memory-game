@@ -1,0 +1,11 @@
+/*Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+* {
+    margin: 0;
+    border: none;  
+    background-color: aqua;
+    box-sizing: border-box; 
+    font-family: 'Secular one', Arial, Helvetica, sans-serif;
+}
