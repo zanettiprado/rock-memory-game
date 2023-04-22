@@ -6,7 +6,7 @@ const singers = [
     'dave',
     'elvis',
     'eric',
-    'freedy',
+    'freddy',
     'kurt',
     'michael',
     'slash',
@@ -25,13 +25,12 @@ const createCard = (singer) => {
     const front = createElement('div', 'face front');
     const back = createElement('div', 'face back');
 
-    front.style.backgroundImage = `url('../images/${singer}.png')`;
+    front.style.backgroundImage = `url('../${singer}.png')`;
 
     card.appendChild(front);
     card.appendChild(back);
 
     return card;
-
 }
 
 const laodGame = () => {
