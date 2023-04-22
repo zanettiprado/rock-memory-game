@@ -103,22 +103,19 @@ img {
     height: 100%;
     border-radius: 10px;
     position: absolute;
+    background-size: cover;
+    background-position: center;
     border: 3px solid #5d4458;
     
 }
 
 .front {
-    background-image: url('../images/amy.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-
+    transform: rotateY(180deg);
+     border-radius: 50%;
 }
 
 .back {
     background-image: url('../images/back.png');
-    background-size: cover;
-    background-position: center;
     backface-visibility: hidden;
 }
 
