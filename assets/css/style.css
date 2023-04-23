@@ -128,6 +128,6 @@ img {
     backface-visibility: hidden;
 }
 
-.card:hover {
+.turn-card {
     transform: rotateY(180deg);
 }
