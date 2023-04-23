@@ -29,6 +29,14 @@ const createElement = (tag, className) => {
     element.className = className;
     return element;
 }
+
+const checkGameOver = () => {
+    const matchedCards = document.querySelectorAll('.match-card');
+
+    if (matchedCards.length === 20 ) {
+        alert('You win!!')
+    }
+}
 /**
  * It creates a new attribute to check if cards matchs
  * Else argument flip the card if they dont match with timout of few ms. 
@@ -43,6 +51,7 @@ const checkCards = () => {
         firstCard = '';
         secondCard = '';
         
+        checkGameOver();
 
     } else {
         setTimeout(() => {
