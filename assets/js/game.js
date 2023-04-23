@@ -14,7 +14,11 @@ const singers = [
     'slash',
     'tina',
 ];
-
+/**
+ * let to identify it two cards are already turned out.
+ */
+let firstCard = '';
+let secondCard = '';
 
 /** 
  * const to create elements with the same classe we have created before in HTML document 
@@ -26,9 +30,18 @@ const createElement = (tag, className) => {
     return element;
 }
 
-let firstCard = '';
-let secondCard = '';
+const checkCards = () => {
+    const firstSinger = firstCard.getAttribute('data-singer');
+    const secondSinger = secondCard.getAttribute('data-singer');
 
+    if (firstSinger === secondSinger ) {
+
+    } else {
+        
+        firstCard.classList.remove('turn-card');
+        secondCard.classList.remove('turn-card');
+    }
+};
 
 const turnCard = ({ target }) => {
 
@@ -43,15 +56,15 @@ const turnCard = ({ target }) => {
         target.parentNode.classList.add('turn-card');
         secondCard = target.parentNode;
     }
-
-
     
+checkCards();
 
 }
 
 /**
- * const to create card using the elements above. It will take the elements, match with
- * each class and get information from our arrays and bring the images from the folder. 
+ * const to create card using the elements and classes dynamically.
+ * It will take the elements, match with each class and get information 
+ * from our arrays and bring the images from the folder. 
  * addEventlistner that matchs with the function to reveal the card
  */
 const createCard = (singer) => {
@@ -66,6 +79,7 @@ const createCard = (singer) => {
     card.appendChild(back);
 
     card.addEventListener('click', turnCard);
+    card.setAttribute('data-singer', singer);
 
     return card;
 }
