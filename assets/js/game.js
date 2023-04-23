@@ -29,21 +29,36 @@ const createElement = (tag, className) => {
     element.className = className;
     return element;
 }
-
+/**
+ * It creates a new attribute to check if cards matchs
+ * Else argument flip the card if they dont match with timout of few ms. 
+ */
 const checkCards = () => {
     const firstSinger = firstCard.getAttribute('data-singer');
     const secondSinger = secondCard.getAttribute('data-singer');
 
-    if (firstSinger === secondSinger ) {
+    if (firstSinger === secondSinger) {
+        firstCard.firstChild.classList.add('match-card');
+        secondCard.firstChild.classList.add('match-card');
+        firstCard = '';
+        secondCard = '';
+        
 
     } else {
-        
-        firstCard.classList.remove('turn-card');
-        secondCard.classList.remove('turn-card');
+        setTimeout(() => {
+
+            firstCard.classList.remove('turn-card');
+            secondCard.classList.remove('turn-card');
+            firstCard = '';
+            secondCard = '';
+        }, 900)
+
     }
 };
 
-const turnCard = ({ target }) => {
+const turnCard = ({
+    target
+}) => {
 
     if (target.parentNode.className.includes('turn-card')) {
         return;
@@ -51,13 +66,13 @@ const turnCard = ({ target }) => {
 
     if (firstCard === '') {
         target.parentNode.classList.add('turn-card');
-        firstCard = target.parentNode; 
-    } else if(secondCard === '') {
+        firstCard = target.parentNode;
+    } else if (secondCard === '') {
         target.parentNode.classList.add('turn-card');
         secondCard = target.parentNode;
     }
-    
-checkCards();
+
+    checkCards();
 
 }
 

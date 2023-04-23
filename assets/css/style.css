@@ -115,6 +115,7 @@ img {
     background-position: center;
     border: 3px solid #5d4458;
     cursor: pointer;
+    transition: all 900ms ease;
 
 }
 
@@ -130,4 +131,8 @@ img {
 
 .turn-card {
     transform: rotateY(180deg);
+}
+
+.match-card {
+    visibility: collapse;
 }
