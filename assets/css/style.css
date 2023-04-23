@@ -4,10 +4,11 @@
 /*Reset*/
 * {
     margin: 0;
-    border: none;  
-    box-sizing: border-box; 
+    border: none;
+    box-sizing: border-box;
     font-family: 'Secular one', Arial, Helvetica, sans-serif;
 }
+
 /*Login page*/
 .login-form {
     align-items: center;
@@ -24,11 +25,13 @@
     justify-content: center;
     margin-bottom: 25px;
 }
+
 img {
     width: 180px;
     margin-bottom: 25px;
 
 }
+
 .login-header h1 {
     font-size: 1.5em;
     color: #5d4458;
@@ -64,21 +67,25 @@ img {
     max-width: 180px;
     padding: 5px;
     opacity: 0.8;
+
 }
+
 /*iteractivity with button / disabled function style*/
 .login-button:hover {
     background-color: #fff;
     border: 2px solid #5d4458;
 }
+
 .login-button:disabled {
     background-color: rgb(187, 183, 183);
     color: rgba(128, 128, 128, 0.6);
     border: #fff;
+    cursor: not-allowed;
 }
 
 /*Game page - Main page*/
 
-.grid  {
+.grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
@@ -95,7 +102,8 @@ img {
     background-color: #FDB165;
     position: relative;
     transition: all 500ms ease;
-    transform-style: preserve-3d ;
+    transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 .face {
@@ -106,12 +114,13 @@ img {
     background-size: cover;
     background-position: center;
     border: 3px solid #5d4458;
-    
+    cursor: pointer;
+
 }
 
 .front {
     transform: rotateY(180deg);
-     border-radius: 50%;
+    border-radius: 50%;
 }
 
 .back {
