@@ -33,22 +33,28 @@ const createElement = (tag, className) => {
     element.className = className;
     return element;
 }
-
+/**
+ * It check if the game has finished. If you turned and matched 20 cards it will finish. 
+ * If the game finish a message will appear in the screen saying how many attemps you took to finish
+ */
 const checkGameOver = () => {
     const matchedCards = document.querySelectorAll('.match-card');
 
     if (matchedCards.length === 20) {
         const attempts = document.querySelector('.clicks').innerHTML;
-        const message = `You win! You took ${attempts} attempts.`;
+        const message = `Well done! You took ${attempts} attempts.`;
         const playAgainBtn = createElement('button', 'play-again');
         playAgainBtn.innerText = 'Play again';
         playAgainBtn.addEventListener('click', () => {
             location.reload(); // Reload the page to restart the game
         });
-        const gameOverMessage = createElement('div', 'game-over-message');
+        
+        setTimeout(() => {
+            const gameOverMessage = createElement('div', 'game-over-message');
         gameOverMessage.innerText = message;
         gameOverMessage.appendChild(playAgainBtn);
         grid.appendChild(gameOverMessage);
+    }, 600)
     }
 }
 /**
@@ -65,7 +71,7 @@ const checkCards = () => {
         firstCard = '';
         secondCard = '';
 
-        checkGameOver();
+        checkGameOver();// check if the game has finishe
 
     } else {
         setTimeout(() => {
@@ -74,23 +80,21 @@ const checkCards = () => {
             secondCard.classList.remove('turn-card');
             firstCard = '';
             secondCard = '';
-        }, 900)
+        }, 600)
 
     }
 };
+
 /**
  * Function to count how many clicks player is applying while he is playing. 
  * It will count one click for it trying to match the cars it means for each two clicks he will receive 1 counted click
  */
-
 const incrementClicks = () => {
     clicks++;
     document.querySelector('.clicks').innerHTML = clicks.toString().padStart(2, '0');
 }
 
-const turnCard = ({
-    target
-}) => {
+const turnCard = ({target}) => {
 
     if (target.parentNode.className.includes('turn-card')) {
         return;
