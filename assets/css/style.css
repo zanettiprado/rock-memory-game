@@ -86,7 +86,7 @@ img {
 /*Game page - Main page*/
 
 body {
-    background-image: url('/assets/images/gamebg.png');
+    background-image: url('/assets/images/bgimage.png');
     background-size: cover;
 }
 /* Section */
