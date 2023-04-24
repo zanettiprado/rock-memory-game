@@ -8,12 +8,12 @@ const form = document.querySelector('.login-form');
 
 /** 
  * Function to validate the player's name and check if they are using a valid name.
- * more than 3 characteres is required;
+ * more than 3 characteres and less than 13 is required go ;
  * if they are following the requirements the button play will be able to start the game.
  */
 function validadeInput(event) {
     const target = event.target;
-    if(target.value.length > 2) {
+    if(target.value.length > 2 && target.value.length <= 12) {
         button.removeAttribute('disabled');
         return;
     }

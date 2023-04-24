@@ -116,9 +116,7 @@ const turnCard = ({
         secondCard = target.parentNode;
         incrementClicks();// increment +1 each time that player turn 2 cards as 1 attempt.
     }
-
     checkCards();
-
 };
 
 /**
