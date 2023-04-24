@@ -19,7 +19,7 @@ const singers = [
 ];
 /**
  * let to identify it two cards are already turned out.
- * to get and count clicks
+ * to get and player clicks 
  */
 let firstCard = '';
 let secondCard = '';
@@ -68,11 +68,16 @@ const checkCards = () => {
 
     }
 };
+/**
+ * Function to count how many clicks player is applying while he is playing. 
+ * It will count one click for it trying to match the cars it means for each two clicks he will receive 1 counted click
+ */
 
 const incrementClicks = () => {
     clicks++;
     document.querySelector('.clicks').innerHTML = clicks.toString().padStart(2, '0');
 }
+
 const turnCard = ({
     target
 }) => {
