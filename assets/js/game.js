@@ -38,7 +38,17 @@ const checkGameOver = () => {
     const matchedCards = document.querySelectorAll('.match-card');
 
     if (matchedCards.length === 20) {
-        alert('You win!!')
+        const attempts = document.querySelector('.clicks').innerHTML;
+        const message = `You win! You took ${attempts} attempts.`;
+        const playAgainBtn = createElement('button', 'play-again');
+        playAgainBtn.innerText = 'Play again';
+        playAgainBtn.addEventListener('click', () => {
+            location.reload(); // Reload the page to restart the game
+        });
+        const gameOverMessage = createElement('div', 'game-over-message');
+        gameOverMessage.innerText = message;
+        gameOverMessage.appendChild(playAgainBtn);
+        grid.appendChild(gameOverMessage);
     }
 }
 /**
@@ -145,5 +155,5 @@ const laodGame = () => {
 window.onload = () => {
     const localName = localStorage.getItem('player');
     playerName.innerHTML = localName;
-    laodGame();
+    laodGame();//check the player name and load the game
 }
