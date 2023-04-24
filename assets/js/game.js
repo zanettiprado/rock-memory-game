@@ -1,3 +1,6 @@
+//to get the player name and send to main painel
+const playerName = document.querySelector('.player')
+
 //function that will create a grid
 const grid = document.querySelector('.grid');
 
@@ -16,10 +19,11 @@ const singers = [
 ];
 /**
  * let to identify it two cards are already turned out.
+ * to get and count clicks
  */
 let firstCard = '';
 let secondCard = '';
-
+let clicks = 0;
 /** 
  * const to create elements with the same classe we have created before in HTML document 
  * from now elements will be created here in js matching this create element and create card const
@@ -33,7 +37,7 @@ const createElement = (tag, className) => {
 const checkGameOver = () => {
     const matchedCards = document.querySelectorAll('.match-card');
 
-    if (matchedCards.length === 20 ) {
+    if (matchedCards.length === 20) {
         alert('You win!!')
     }
 }
@@ -50,7 +54,7 @@ const checkCards = () => {
         secondCard.firstChild.classList.add('match-card');
         firstCard = '';
         secondCard = '';
-        
+
         checkGameOver();
 
     } else {
@@ -65,6 +69,10 @@ const checkCards = () => {
     }
 };
 
+const incrementClicks = () => {
+    clicks++;
+    document.querySelector('.clicks').innerHTML = clicks.toString().padStart(2, '0');
+}
 const turnCard = ({
     target
 }) => {
@@ -76,6 +84,7 @@ const turnCard = ({
     if (firstCard === '') {
         target.parentNode.classList.add('turn-card');
         firstCard = target.parentNode;
+        incrementClicks();
     } else if (secondCard === '') {
         target.parentNode.classList.add('turn-card');
         secondCard = target.parentNode;
@@ -126,4 +135,10 @@ const laodGame = () => {
         grid.appendChild(card);
     });
 }
-laodGame();
+
+
+window.onload = () => {
+    const localName = localStorage.getItem('player');
+    playerName.innerHTML = localName;
+    laodGame();
+}
