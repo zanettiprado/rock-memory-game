@@ -1,5 +1,5 @@
 //to get the player name and send to main painel
-const playerName = document.querySelector('.player')
+const playerName = document.querySelector('.player');
 
 //function that will create a grid
 const grid = document.querySelector('.grid');
@@ -17,13 +17,13 @@ const singers = [
     'slash',
     'tina',
 ];
-/**
- * let to identify it two cards are already turned out.
- * to get and player clicks 
- */
+
+// to identify if cards were already checked
 let firstCard = '';
 let secondCard = '';
+// to check how many clicks player spent
 let clicks = 0;
+
 /** 
  * const to create elements with the same classe we have created before in HTML document 
  * from now elements will be created here in js matching this create element and create card const
@@ -32,7 +32,8 @@ const createElement = (tag, className) => {
     const element = document.createElement(tag);
     element.className = className;
     return element;
-}
+};
+
 /**
  * It check if the game has finished. If you turned and matched 20 cards it will finish. 
  * If the game finish a message will appear in the screen saying how many attemps you took to finish
@@ -48,15 +49,16 @@ const checkGameOver = () => {
         playAgainBtn.addEventListener('click', () => {
             location.reload(); // Reload the page to restart the game
         });
-        
+
         setTimeout(() => {
             const gameOverMessage = createElement('div', 'game-over-message');
-        gameOverMessage.innerText = message;
-        gameOverMessage.appendChild(playAgainBtn);
-        grid.appendChild(gameOverMessage);
-    }, 600)
+            gameOverMessage.innerText = message;
+            gameOverMessage.appendChild(playAgainBtn);
+            grid.appendChild(gameOverMessage);
+        }, 600);
     }
-}
+};
+
 /**
  * It creates a new attribute to check if cards matchs
  * Else argument flip the card if they dont match with timout of few ms. 
@@ -71,7 +73,7 @@ const checkCards = () => {
         firstCard = '';
         secondCard = '';
 
-        checkGameOver();// check if the game has finishe
+        checkGameOver(); // check if the game has finishe
 
     } else {
         setTimeout(() => {
@@ -80,7 +82,7 @@ const checkCards = () => {
             secondCard.classList.remove('turn-card');
             firstCard = '';
             secondCard = '';
-        }, 600)
+        }, 600);
 
     }
 };
@@ -92,9 +94,15 @@ const checkCards = () => {
 const incrementClicks = () => {
     clicks++;
     document.querySelector('.clicks').innerHTML = clicks.toString().padStart(2, '0');
-}
+};
 
-const turnCard = ({target}) => {
+/**
+ * define first and second cards using the parent element as parameters to see if we have two cards turned 
+ * using the firtsCard and secondCard let. 
+ */
+const turnCard = ({
+    target
+}) => {
 
     if (target.parentNode.className.includes('turn-card')) {
         return;
@@ -103,15 +111,15 @@ const turnCard = ({target}) => {
     if (firstCard === '') {
         target.parentNode.classList.add('turn-card');
         firstCard = target.parentNode;
-        incrementClicks();
     } else if (secondCard === '') {
         target.parentNode.classList.add('turn-card');
         secondCard = target.parentNode;
+        incrementClicks();// increment +1 each time that player turn 2 cards as 1 attempt.
     }
 
     checkCards();
 
-}
+};
 
 /**
  * const to create card using the elements and classes dynamically.
@@ -134,7 +142,8 @@ const createCard = (singer) => {
     card.setAttribute('data-singer', singer);
 
     return card;
-}
+};
+
 /**
  * function to load the game 
  * It will create the 10 cards with each singer as per our array name.
@@ -145,7 +154,7 @@ const laodGame = () => {
 
     const duplicateSingers = [...singers, ...singers];
 
-    const shuffleCards = duplicateSingers.sort(() => Math.random() - .5);
+    const shuffleCards = duplicateSingers.sort(() => Math.random() - 0.5);
 
     duplicateSingers.forEach((singer) => {
 
@@ -153,11 +162,14 @@ const laodGame = () => {
 
         grid.appendChild(card);
     });
-}
+};
 
-
+/**
+ * after finishing the process the function loadGame was included inside this fuction 
+ * this one will be responsible to save the player name and use in the panel.
+ */
 window.onload = () => {
     const localName = localStorage.getItem('player');
     playerName.innerHTML = localName;
-    laodGame();//check the player name and load the game
-}
+    laodGame(); //check the player name and load the game
+};

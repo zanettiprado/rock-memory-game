@@ -100,7 +100,7 @@ main {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    padding: 10px 10px 40px;
+    padding: 5px;
 }
 
 header {
@@ -195,6 +195,7 @@ header {
     border-radius: 10px;
     background-color: #FDB165;
     color: #5d4458;
+    cursor: pointer;
 }
 
 .play-again:hover {
@@ -205,9 +206,19 @@ header {
 /* Footer */
 footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     font-size: 1em;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+i {
+    color: black;
+    font-size: 40px;
+    font-size: 2.5em;
+    padding-top: 10px;
 }
