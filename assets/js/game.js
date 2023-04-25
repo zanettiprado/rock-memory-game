@@ -1,4 +1,4 @@
-//to get the player name and send to main painel
+//to define the player name and send to main painel
 const playerName = document.querySelector('.player');
 
 //function that will create a grid
