@@ -1,14 +1,14 @@
-<h1 align="center">Memory Card Game</h1> 
-<h2 align="center">Rock Star Version</h2>
+# Memory Card Game 
+## Rock Star Version
+This Memory Card game follows the classic version's structure and goals. However, this updated version includes a deck of 20 cards containing 10 pairs, featuring 10 famous and popular rock stars. The game is simple and intuitive, requiring players to click on each card to flip it over and find its matching pair.
 
-#
-This Memory Card game follows the same structure and goals as the classic version. In this updated version, you will have a deck of 20 cards containing 10 pairs. It is a simple and intuitive game, requiring you to flip over each card by clicking on it in order to find a matching pair. This is the first version of the Rok Stark memory game, featuring 10 famous and popular rock stars.
+Before starting the game, players will be prompted to log in and enter their name. The name should contain at least 3 and no more than 12 characters. Once the name is entered, players can click the start button and begin playing.
 
-Before starting the game, you will be prompted to login and enter your name. Your name should contain at least 3 characters and no more than 12. Once you've filled in the appropriate space with your name, you will be able to click the start button and begin playing the game.
+Upon starting the game, players will be presented with a deck of cards. Clicking each card one by one will reveal its face, and players must find all 10 pairs to complete the game. The objective of the game is to complete it with as few attempts as possible.
 
-On the next page, you will see the deck of cards. Click each card one by one until you have found all 10 pairs. The main objective of the game is to complete the game with the fewest attempts possible.
+We hope you enjoy playing the Rok Star memory game!
 
-So, enjoy playing the Rok Star memory game!
+
 ![Login page - Presentation ](assets/documentation/responsiveness.png)
 
 # Live Demo
@@ -18,24 +18,36 @@ You can find a live demo [here](https://zanettiprado.github.io/rock-memory-game/
 
 ## Ideal visitor for this page - Game page
 
-- The ideal user for this web game could be anyone from 4 years old that wants to play or get distract.
+- Children who enjoy playing memory games and want to improve their memory skills in a fun way. The game is easy to understand and visually appealing, making it an enjoyable experience for kids.
 
-- Someone who wants to take a break during the day and relax a bit. Each match would take less than 1 minute so user can play several times. 
+- Adults who want a quick and entertaining distraction during their work break or leisure time. The game can be played in short intervals, making it a perfect activity to fill short gaps of free time.
 
-- Users that are trying to challange theirselves or want create a dinamic game between each other to see who is the best one. 
+- Gamers who enjoy competition and challenge. The game allows users to compete with friends and family to see who can complete the game with the fewest attempts possible, creating a dynamic and fun experience.
+
+- Elderly individuals who want to exercise their memory and cognitive skills in a simple and easy way. The game is not only entertaining but also has potential cognitive benefits, making it an ideal activity for seniors.
+
+- Individuals who are learning a new language or want to improve their vocabulary. The game can be customized with different word sets, making it a useful tool for language learners to practice vocabulary.
 
 ## User Stories
-### First Time Visitor Goals
-- lala
-- lala
 
-### Returning Time Visitor Goals
-- lala
-- lala
 
-### Frequent Time Visitor Goals
-- lala
-- lala
+### First-time player:
+
+1. As a first-time player, I want to be able to easily understand the rules and gameplay of the memory game so that I can start playing quickly.
+2. I want to be able to create a new account easily, using a simple registration process and a username of my choice.
+3. I want to have fun while playing the game and enjoy the experience.
+
+### Returning player:
+
+1. As a returning player, I want to be able to start a new game quickly, without having to go through a lengthy login process.
+2. I want to be able to play the game as a way to take a break from work or other activities.
+3. I want to be able to challenge myself to improve my performance by reducing the number of attempts required to complete the game.
+
+### Frequent player:
+
+1. As a frequent player, I want to be able to see if any new features have been added to the game, such as new characters or more cards.
+2. I want to be able to play the game as a way to continue training my memory and cognitive skills.
+3. I want to be able to choose from different difficulty levels, including a harder mode, to make the game more challenging.
 
 # Language used 
 - HTML
