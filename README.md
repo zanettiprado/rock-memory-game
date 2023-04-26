@@ -49,6 +49,36 @@ You can find a live demo [here](https://zanettiprado.github.io/rock-memory-game/
 2. I want to be able to play the game as a way to continue training my memory and cognitive skills.
 3. I want to be able to choose from different difficulty levels, including a harder mode, to make the game more challenging.
 
+# Features
+
+
+This game is designed to be a simple and straightforward HTML game with two pages. The first page is the login page which features a centralised logo and an input box for the player's name, as well as a start button to initiate the game. The input box requires the player to enter their name with at least 3 characters and at most 12 characters to ensure that a real first name is used.
+![image showing its necessary at least 13 characters](assets/documentation/12characteres.png)
+
+ The start button is disabled until the player has filled in their name field with the mandatory information.
+
+To provide an easy-to-understand experience for first-time users, a hover color function is included, which highlights the input name and start game elements when the user hovers over them. If the name field is not filled, the cursor mouse will become "not-allowed".
+ ![image showing is necessary fill the input name](assets/documentation/name-required.png)
+
+Once the player enters their name and clicks the start button, they will be taken to the next page where they can start playing the game. 
+![Full game page](assets/documentation/gamepage.png)
+
+The top of the page features a simple panel with a back login button, the player's name, and the number of attempts taken.
+![Top Panel](assets/documentation/firstbar.png)
+
+The main game screen features a grid of 20 cards that the player needs to match by finding 10 pairs. Each time the player clicks on a card, the attempts counter increases by one. Once the player clicks on the first card, the card will flip over, revealing the image on the other side. The player will then need to click on another card to see if it's a matching pair. If the cards match, they will become white and slightly opaque to indicate that they have been matched. If the cards do not match, they will flip back over, and the player can try again. After the first match trial, the attempts counter will increment by one.
+
+![Card after match slightly opaque ](assets/documentation/whitecards.png)
+
+ After the player has matched all pairs, a message will appear on the screen congratulating them and displaying the number of attempts taken to complete the game.
+The player can easily find the restart button to start the game again and try to complete it with fewer attempts. Alternatively, the player can go back to the login page by clicking on the button to change the player name. 
+![Message after finishing the game](assets/documentation/attempts.png)
+
+At the bottom of the game screen, there is a Github logo that, when clicked, will redirect the user to the game developer's Github account.
+
+For returning players, the game provides a simple and quick way to start playing again and try to improve their attempts. Frequent players can expect new features to be implemented, such as new characters, more cards, or harder game modes in the future.
+
+
 # Language used 
 - HTML
 - CSS
