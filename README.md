@@ -72,6 +72,8 @@ Once the player enters their name and clicks the start button, they will be take
 <br>
 
 The top of the page features a simple panel with a back login button, the player's name, and the number of attempts taken.
+<br>
+
 ![Top Panel](assets/documentation/firstbar.png)
 <br>
 
@@ -161,10 +163,9 @@ To ensure there were no syntax errors, this project was validated using the W3C 
 ![JShint validator](assets/documentation/js-validator.PNG)
 <br>
 
-In addition, the website's performance, accessibility, best practices, and SEO were tested using Lighthouse within the Chrome Developer Tools.
 
 ## Accessibility
-The website is as accessible as possible:
+the website's performance, accessibility, best practices, and SEO were tested using Lighthouse within the Chrome Developer Tools.
 <br>
 
 ![Light-house test login](assets/documentation/login-page-lighthouse.PNG)
@@ -186,6 +187,13 @@ Although the game page's performance score is currently below 60%, it is importa
 - If you click several times at the same card too quickly, it can understands the same card as a match and make it disappear. However, this bug only occurs when the game is played at an unusually fast pace clicking several times on the grid
 - Sometimes the webpage loads with mirrored cards, but this happens rarely and not constantly.
 
+
+# Further Implementation:
+
+- Create new modules for different themes such as movies, series, football teams, etc.
+- Implement a leaderboard for the game, with the best scores and time taken function to complete the game.
+- Add new cards to the existing rock star theme creating level changes for easy, medium, hard, etc., creating a new experience for users.
+- Implement a multiplayer mode, where players can log in at the same time, either on the same machine or from different devices.
 
 # Deployment
 
@@ -209,7 +217,9 @@ Cloning a GitHub repository allows us to download a copy of the repository onto 
 6. Type git clone and paste the copied HTTPS link to initiate the cloning process.
 
 # Credits
-As mentioned in the relevant section, this website has been developed by Felipe Zanetti as part of the diploma criteria for achieving the milestone Project 2 at Code Institute. All rights for the images used on the website are reserved for their respective owners and sources, which are mentioned and credited accordingly. These images are used to enhance the overall user experience of the website
+As mentioned in the relevant section, this website has been developed by Felipe Zanetti as part of the diploma criteria for achieving the milestone Project 2 at Code Institute. All rights for the images used on the website are reserved for their respective owners and sources, which are mentioned and credited accordingly. These images are used to enhance the overall user experience of the website. As part of my studies this game were based in information in the "How to do" section of [w3schools](https://www.w3schools.com/howto/default.asp). After checking and draft all information I have created and implement all desing and functions in this page. 
 
+# Disclaimer 
+This Game or Website was created for my studies development and anyone are authorised to clone and create a copy.
  
 
