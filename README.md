@@ -6,7 +6,7 @@ Before starting the game, players will be prompted to log in and enter their nam
 
 Upon starting the game, players will be presented with a deck of cards. Clicking each card one by one will reveal its face, and players must find all 10 pairs to complete the game. The objective of the game is to complete it with as few attempts as possible.
 
-We hope you enjoy playing the Rok Star memory game!
+We hope you enjoy playing the Rock Star memory game!
 
 
 ![Login page - Presentation ](assets/documentation/responsiveness.png)

@@ -7,7 +7,7 @@ const button = document.querySelector('.login-button');
 const form = document.querySelector('.login-form');
 
 /** 
- * Function to validate the player's name and check if they are using a valid name.
+ * Validates the player's name and check if they are using a valid name.
  * more than 3 characteres and less than 13 is required go ;
  * if they are following the requirements the button play will be able to start the game.
  */
@@ -20,7 +20,7 @@ function validadeInput(event) {
     button.setAttribute('disabled','');
 }
 /** 
- * Function to handle the player information 
+ * Handles the player information 
  * save the player name and send to display
  * and to call the main page of the game.
 */
